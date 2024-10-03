@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   root "cars#index"
   resources :cars, only: [ :index, :show ] do
     resources :reviews, only: [ :new, :create ]
+    resources :favourites, only: [ :create ]
   end
+  resources :favourites, only: [ :index, :destroy ]
 end

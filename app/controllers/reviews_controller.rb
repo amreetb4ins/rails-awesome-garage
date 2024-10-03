@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   def new
-    @review = Review.new
     @car = Car.find(params[:car_id])
+    @review = Review.new
   end
 
   def create
@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to car_path(@car)
     else
-      render :new, status: :unprocessable_entity
+      render "cars/show", status: :unprocessable_entity
     end
   end
 

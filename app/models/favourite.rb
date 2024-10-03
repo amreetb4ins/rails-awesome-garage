@@ -1,3 +1,3 @@
 class Favourite < ApplicationRecord
-  belongs_to :Car
+  belongs_to :car
 end
