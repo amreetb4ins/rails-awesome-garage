@@ -90,6 +90,8 @@ GEM
     drb (2.2.1)
     error_highlight (0.6.0)
     erubi (1.13.0)
+    faker (3.4.2)
+      i18n (>= 1.8.11, < 2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.6)
@@ -226,6 +228,9 @@ GEM
       rubocop-rails
     ruby-progressbar (1.13.0)
     securerandom (0.3.1)
+    simple_form (5.3.1)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -269,12 +274,14 @@ DEPENDENCIES
   brakeman
   debug
   error_highlight (>= 0.4.0)
+  faker
   importmap-rails
   jbuilder
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.2.1)
   rubocop-rails-omakase
+  simple_form
   sprockets-rails
   stimulus-rails
   turbo-rails
