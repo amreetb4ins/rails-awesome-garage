@@ -9,10 +9,14 @@
 <%= @car.owner.nickname %></p>
 <hr>
 
-
-<%= simple_form_for [@car, @favourite] do |f| %>
-  <%= f.submit "Add to my garage" %>
-<% end %>
+<% if @car.favourites.empty? %>
+  <%= simple_form_for [@car, @favourite] do |f| %>
+    <%= f.submit "Add to my garage" %>
+  <% end %>
+  <% else %>
+    <p>This car is parked in your garage</p>
+    <%= link_to "View my garage", favourites_path(@favourite)%>
+  <% end %>
 
 
 
