@@ -1,0 +1,24 @@
+<h1>
+<%= @car.brand %>
+<%= @car.model %>
+<%= @car.year %>
+</h1>
+<p> Fuel type:
+<%= @car.fuel %></p>
+<p> Owner:
+<%= @car.owner.nickname %></p>
+
+
+<%= link_to "Leave a Review", new_car_review_path(@car) %>
+
+
+<h4>All Reviews</h4>
+<ul class="list-group">
+  <% @car.reviews.each do |review| %>
+  <li class="list-group-item"><%= "Comment: #{review.comment} Rating:#{review.rating}" %></li>
+  <% end %>
+  </ul>
+  <br>
+
+
+<%= link_to "Back home", root_path %>

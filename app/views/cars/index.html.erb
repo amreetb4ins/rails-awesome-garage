@@ -1,0 +1,8 @@
+<h1>View all cars</h1>
+
+<ol>
+<% @cars.each do |car| %>
+<li> <%= link_to "#{car.brand} #{car.model} #{car.year}", car_path(car) %> </li>
+
+<% end %>
+<ol>

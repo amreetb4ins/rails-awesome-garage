@@ -1,0 +1,8 @@
+<h1>Write a review for <%= "#{@car.brand} #{@car.model} #{@car.year}"%></h1>
+
+<%= simple_form_for([@car, @review]) do |f|%>
+  <%= f.input :comment %>
+  <%= f.select :rating, 1..5 %>
+  <%= f.submit %>
+
+<% end %>
