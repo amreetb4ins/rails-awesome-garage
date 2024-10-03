@@ -36,5 +36,5 @@ puts "Creating cars.."
     owner: owners.sample
   )
 
-  puts "#{car.brand} #{car.model} #{car.year} has been created"
+  puts "#{car.brand} #{car.model} #{car.year} owned by #{car.owner.nickname} has been created"
 end
