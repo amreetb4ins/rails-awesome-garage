@@ -1,4 +1,4 @@
-.container {
+.container .show-container{
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -6,11 +6,13 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  padding: 20px;
 }
 
 .card-car{
   max-width: 500px;
-  margin: 0px;
+  width: 100%;
+  margin: 0 auto;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-top: 40px;
   padding-top: 10px;
@@ -37,7 +39,6 @@
   }
 }
 
-
 .card-car-text{
   display: flex;
   justify-content: space-between;
@@ -55,4 +56,59 @@
     position: relative;
     bottom:25px;
   }
+}
+.show-car-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 10px;
+
+}
+
+.show-card{
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  font-family: "Russo One", sans-serif;
+  margin: 20px auto;
+
+}
+
+.show-card ul li{
+  list-style: none;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  color:black;
+  margin: 0 auto;
+  padding: 5px;
+
+  h4{
+    color:Red;
+    font-weight: bold;
+    font-family: "Russo One", sans-serif;
+  }
+
+}
+
+.show-card form{
+  margin-top:20px;
+  padding: 10px;
+}
+
+.show-container a{
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Russo One", sans-serif;
+  margin: 10px;
+
+}
+
+.show-car-cards{
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
 }
