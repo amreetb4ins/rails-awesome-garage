@@ -2,7 +2,7 @@
 
 <% @favourites.each do |favourite| %>
 <p><%= favourite.car.brand %> <%= favourite.car.model %> | <%= favourite.car.year %></p>
-<%= link_to "Remove", favourite_path(favourite), data: {turbo_method: :delete, turbo_confirm: "Are you sure you?"} %>
+<%= link_to "Remove", favourite_path(favourite), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 <hr>
 <% end %>
 <hr>

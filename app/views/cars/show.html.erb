@@ -1,8 +1,9 @@
 <h1>
 <%= @car.brand %>
 <%= @car.model %>
-<%= @car.year %>
 </h1>
+<p>Year:
+<%= @car.year %> </p>
 <p> Fuel type:
 <%= @car.fuel %></p>
 <p> Owner:
@@ -17,24 +18,17 @@
     <p>This car is parked in your garage</p>
     <%= link_to "View my garage", favourites_path(@favourite)%>
   <% end %>
-
-
-
 <hr>
-<h4>Leave a review for <%= "#{@car.brand} #{@car.model} #{@car.year}"%></h4>
+<h4>Leave a review</h4>
 <%= simple_form_for [@car, @review] do |f|%>
     <%= f.input :comment %>
     <%= f.select :rating, 0..5 %>
     <%= f.submit %>
   <% end %>
-
 <hr>
 <h4>All Reviews for <%= "#{@car.brand} #{@car.model} #{@car.year}"%> </h4>
-
   <% @car.reviews.each do |review| %>
   <p> <%= "Comment: '#{review.comment}' | Rating:#{review.rating}" %></p>
   <% end %>
-
   <br>
-
-<%= link_to "Back home", root_path %>
+<%= link_to "Back to all cars", root_path %>
