@@ -11,7 +11,8 @@
           <%= image_tag "defaultcar.jpg", alt: "Default photo of car", class: "car-image" %>
       <% end %>
         <div class="card-comment">
-        <p>Comment</p>
+
+        <p><i class="fa-regular fa-comment"></i> <%= link_to "Comment", car_path(car)%></p>
         </div>
     </div>
   </div>
