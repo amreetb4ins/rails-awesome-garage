@@ -10,10 +10,10 @@
         <% else %>
           <%= image_tag "defaultcar.jpg", alt: "Default photo of car", class: "car-image" %>
       <% end %>
-        <div class="card-comment">
-
-        <p><i class="fa-regular fa-comment"></i> <%= link_to "Comment", car_path(car)%></p>
-        </div>
+      <div class="card-car-text">
+        <h6><i class="fa-regular fa-comment"></i> <%= link_to "Comment", car_path(car)%></h6>
+        <p><%= car.owner.nickname %></p>
+      </div>
     </div>
   </div>
   <% end %>
