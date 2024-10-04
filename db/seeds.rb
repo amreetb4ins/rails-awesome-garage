@@ -10,6 +10,7 @@
 require 'faker'
 
 puts "Cleaning up database..."
+Favourite.destroy_all
 Car.destroy_all
 Owner.destroy_all
 puts "Database cleaned"
@@ -27,14 +28,22 @@ owners = Owner.all
 
 puts "Creating cars.."
 
-5.times do
+images = [ "car1.jpg", "car2.jpg", "car3.jpg", "car4.jpg", "car5.jpg" ]
+
+images.each do |image|
+  image_url = images
+end
+
+random_images = images.shuffle
+5.times do |i|
   car = Car.create(
     model: Faker::Vehicle.model,
     brand: Faker::Vehicle.make,
     year: Faker::Vehicle.year,
     fuel: Faker::Vehicle.fuel_type,
-    owner: owners.sample
+    owner: owners.sample,
+    image_url: random_images[i]
   )
 
-  puts "#{car.brand} #{car.model} #{car.year} owned by #{car.owner.nickname} has been created"
+  puts "#{car.brand} #{car.model} #{car.year} owned by #{car.owner.nickname} has been created with image #{car.image_url}"
 end

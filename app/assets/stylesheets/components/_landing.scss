@@ -1,0 +1,40 @@
+body{
+  background-color: #F5F5F5;
+}
+
+.landing{
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  margin-top: 60px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.landing h1{
+  display: flex;
+  justify-content:center;
+  padding-top: 100px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  font-size: 40px;
+  color: white;
+  font-family: "Russo One", sans-serif;
+  margin-left: 10px;
+}
+
+
+.landing a{
+  display: flex;
+  justify-content:center;
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 10px;
+  margin-left: 10px;
+  font-family: "Russo One", sans-serif;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  &:hover{
+     color: #402679;
+     text-shadow:1px 1px 3px rgba(255, 255, 255, 0.8) ;
+  }
+}

@@ -1,6 +1,19 @@
-<h1>All cars</h1>
+<%= render 'shared/navbar' %>
+<div class="container">
+  <% @cars.each do |car| %>
+    <div class="card-car">
+      <div class="card-car-infos">
+        <%= link_to "#{car.brand} #{car.model}", car_path(car) %>
 
-<% @cars.each do |car| %>
-<li><%= link_to "#{car.brand} #{car.model} #{car.year}", car_path(car) %></li>
-
-<% end %>
+        <% if car.image_url? %>
+          <%= image_tag car.image_url, alt: "Photo of car", class: "car-image"%>
+        <% else %>
+          <%= image_tag "defaultcar.jpg", alt: "Default photo of car", class: "car-image" %>
+      <% end %>
+        <div class="card-comment">
+        <p>Comment</p>
+        </div>
+    </div>
+  </div>
+  <% end %>
+</div>
